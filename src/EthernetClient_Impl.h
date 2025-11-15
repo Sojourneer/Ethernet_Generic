@@ -232,9 +232,9 @@ size_t EthernetClient::write(const uint8_t *buf, size_t size)
     // Looping
   }
 
-  setWriteError();
+  //setWriteError();  //DJH 2025116
 
-  return 0;
+  return totalBytesSent; //DJH 2025116
 }
 
 ////////////////////////////////////////
